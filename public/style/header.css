@@ -1,5 +1,6 @@
 /* Official and not clone */
 @import url('//fonts.cdnfonts.com/css/billabong');
+@import "node_modules/font-awesome/scss/font-awesome.scss"; 
 
 
 body {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/login.css" />
+    <link rel="stylesheet" href="{{asset('style/login.css')}}" />
     <link rel="icon" type="image/png" href="{{asset('images_and_icons/insta-fav.ico')}}">
     <title>Instagram clone</title>
 </head>
@@ -16,7 +16,7 @@
                 <h1 title="Instagram" class="flex justify-content-center">
                     <img src="{{asset('images_and_icons/instagram-logo.png')}}" alt="Instagram logo" title="Instagram logo" />
                 </h1>
-                <form method="post" action="{{route('users.store')}}">
+                <form method="post" action="{{route('login')}}">
                     @csrf
                     <label for="email" class="sr-only">enter e-mail</label>
                     <input name="email" placeholder="enter e-mail" />
@@ -41,7 +41,7 @@
             </div>
             <div class="panel register flex justify-content-center">
                 <p>Don`t have an account?</p>
-                <a href="{{route('users.create')}}">Sign up</a>
+                <a href="{{route('getSignUp')}}">Sign up</a>
             </div>
             <div class="app-download flex direction-column align-items-center">
                 <p>Get the app.</p>

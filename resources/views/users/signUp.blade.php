@@ -22,12 +22,16 @@
               </div>
             </div>
             <div class="container">
-              <form method="post" action="{{route('users.store')}}">
+              <form method="post" action="{{route('postSignUp')}}">
                 @csrf
-                <input type="text" placeholder="Mobile Number or Email">
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
+                <input type="text" name="email" placeholder="Mobile Number or Email">
+                <sapn>@error('email'){{$message}}@enderror</sapn>
+                <input type="text" name="name" placeholder="Full Name">
+                <sapn>@error('name'){{$message}}@enderror</sapn>
+                <input type="text" name="userName" placeholder="Username">
+                <sapn>@error('userName'){{$message}}@enderror</sapn>
+                <input type="password" name="password" placeholder="Password">
+                <sapn>@error('password'){{$message}}@enderror</sapn>
                 <button type="submit">Sign up</button>
               </form>
               
@@ -41,7 +45,7 @@
             </div>
         </div>
         <div class="option">
-           <p>Have an account? <a href="{{route('users.index')}}">Log in</a></p>
+           <p>Have an account? <a href="{{route('login')}}">Log in</a></p>
         </div>
         <div class="otherapps">
           <p>Get the app.</p>

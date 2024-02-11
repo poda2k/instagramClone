@@ -43,6 +43,9 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        'checkForSession'=>[
+            \App\Http\Middleware\checkForSession::class
+        ],
     ];
 
     /**

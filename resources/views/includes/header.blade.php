@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('style/header.css')}}">
     <link rel="stylesheet" href="{{asset('style/index.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <script src="https://kit.fontawesome.com/0974be164e.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>instagram</title>
 </head>
@@ -17,7 +19,6 @@
        Instagram
        </a>
        <i class="bi bi-0-circle-fill"></i>
-       <i class="fa-solid fa-folder"></i>
     </div>
     <div class="navigation-search-container">
        <i class="fa fa-search"></i>
@@ -30,7 +31,7 @@
        </div>
     </div>
     <div class="navigation-icons">
-       <a href="https://instagram.com/mimoudix" target ="_blank" class="navigation-link">
+       <a href="#" target ="_blank" class="navigation-link">
        <i class="far fa-compass"></i>
        </a>
        <a class="navigation-link notifica">
@@ -42,10 +43,10 @@
              </div>
           </i>
        </a>
-       <a href="https://instagram.com/mimoudix" class="navigation-link">
+       <a href="#" class="navigation-link">
        <i class="far fa-user-circle"></i>
        </a>
-       <a href="https://instagram.com/mimoudix" id="signout" class="navigation-link">
+       <a href="#" id="signout" class="navigation-link">
        <i class="fas fa-sign-out-alt"></i>
        </a>
     </div>

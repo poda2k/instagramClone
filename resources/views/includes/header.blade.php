@@ -46,9 +46,21 @@
        <a href="#" class="navigation-link">
        <i class="far fa-user-circle"></i>
        </a>
-       <a href="#" id="signout" class="navigation-link">
-       <i class="fas fa-sign-out-alt"></i>
-       </a>
+       @if(Session::has('userId'))
+       <form method="post" action="{{route('logout')}}">
+         @csrf
+         {{-- <a id="signout" class="navigation-link">
+            <i class="fas fa-sign-out-alt"></i>
+            </a> --}}
+            <button type="submit" class="btn btn-primary navigation-link" style="background-color:white;border:0px;padding:0px;"> 
+               <i class="fas fa-sign-out-alt"></i>
+               </button>
+            {{-- {{-- <button type="submit"><a href="#" id="signout" class="navigation-link">
+               <i class="fas fa-sign-out-alt"></i>
+               </a></button> --}}
+       </form> 
+         
+       @endif
     </div>
  </div>
  <main>

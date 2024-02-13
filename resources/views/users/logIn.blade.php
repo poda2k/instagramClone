@@ -16,13 +16,14 @@
                 <h1 title="Instagram" class="flex justify-content-center">
                     <img src="{{asset('images_and_icons/instagram-logo.png')}}" alt="Instagram logo" title="Instagram logo" />
                 </h1>
+                {{$message}}
                 <form method="post" action="{{route('login')}}">
                     @csrf
                     <label for="email" class="sr-only">enter e-mail</label>
-                    <input name="email" placeholder="enter e-mail" />
+                    <input name="email" name="email"  placeholder="enter e-mail" />
 
                     <label for="password" class="sr-only">Senha</label>
-                    <input name="password" type="password" placeholder="password" />
+                    <input name="password" name="password" type="password" placeholder="password" />
 
                     <button type="submit">log in</button>
                 </form>

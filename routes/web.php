@@ -22,11 +22,20 @@ use App\Middleware\checkForSession;
 
 
 
-Route::view('/users/login','users.logIn')->name('login');
+Route::get('/users/login',function(){
+    return view('users.logIn',[
+        'message'=>''
+    ]);
+})->name('login');
 Route::view('/users/register','users.signUp')->name('getSignUp');
 Route::post('/users/login',[userController::class,'logIn'])->name('login');
-Route::post('/users/register',[userController::class,'register'])->name('postSignUp');
+Route::post('/users/register',[userController::class,'signup'])->name('postSignUp');
+
 
 Route::group(['middleware'=>'checkForSession'],function(){
     Route::resource('/',postController::class);
+    Route::get('/userHome',function () {
+        return view('users.userHome');
+    })->name('userHome');
+    Route::post('/logout',[userController::class,'logOut'])->name('logout');
 });
